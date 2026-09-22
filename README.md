@@ -1,4 +1,4 @@
-# Vibe Extension Starter
+# Firefox Extension Starter
 
 A minimal starter for building a small personal Firefox extension with an
 AI coding agent.
@@ -14,7 +14,7 @@ with one browser annoyance and ask the agent for the smallest visible result.
 ## Start in five minutes
 
 1. Get the repository:
-   - with Git: `git clone https://github.com/maximtop/vibe-extension-starter.git`
+   - with Git: `git clone https://github.com/i-zhirov/firefox-extension-starter.git`
    - without Git: click **Code → Download ZIP**, then unzip it
 2. Open the repository folder in your AI coding editor or agent.
 3. Describe one thing you want to change in the browser.

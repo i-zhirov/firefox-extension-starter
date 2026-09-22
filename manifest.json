@@ -5,7 +5,7 @@
   "description": "A minimal starting point for a personal browser extension.",
   "browser_specific_settings": {
     "gecko": {
-      "id": "vibe-extension-starter@example.org"
+      "id": "firefox-extension-starter@example.org"
     }
   }
 }
