@@ -1,7 +1,7 @@
 # Vibe Extension Starter
 
-A minimal starter for building a small personal Chrome/Chromium extension with
-an AI coding agent.
+A minimal starter for building a small personal Firefox extension with an
+AI coding agent.
 
 It intentionally has no framework, build step, package manager, or tests. Start
 with one browser annoyance and ask the agent for the smallest visible result.
@@ -22,22 +22,25 @@ with one browser annoyance and ask the agent for the smallest visible result.
 For example:
 
 > On example.com, replace every letter “A” with a fish emoji. Make the smallest
-> working version, then tell me exactly how to load and test it in Chrome.
+> working version, then tell me exactly how to load and test it in Firefox.
 
 The agent should read [`AGENTS.md`](AGENTS.md) and [`manifest.json`](manifest.json),
 then add only the files the extension actually needs.
 
-## Load it in Chrome
+## Load it in Firefox
 
-1. Open `chrome://extensions`.
-2. Enable **Developer mode**.
-3. Click **Load unpacked**.
-4. Select this repository folder — the one containing `manifest.json`.
-5. Open the test page and check that the requested change is visible.
+1. Open `about:debugging` in Firefox.
+2. Click **This Firefox**.
+3. Click **Load Temporary Add-on…** and select the `manifest.json` file in
+   this repository folder (Firefox reads the whole folder).
+4. Open the test page and check that the requested change is visible.
+
+A temporary add-on is removed when Firefox restarts. If you restart Firefox,
+load it again with the same steps.
 
 After every code change:
 
-1. Click **Reload** on the extension card in `chrome://extensions`.
+1. Click **Reload** on the add-on card in `about:debugging`.
 2. Reload the test page.
 3. Try the same action again.
 
@@ -60,14 +63,17 @@ Simple examples:
 
 ## What is included
 
-- `manifest.json` — the minimal Manifest V3 description of the extension;
+- `manifest.json` — the minimal Manifest V3 description of the extension,
+  including `browser_specific_settings.gecko.id`, the stable identity that
+  Firefox uses for the add-on;
 - `AGENTS.md` — beginner-friendly instructions for the AI agent;
 - `README.md` — the setup and loading steps you are reading now.
 
-Chrome/Chromium is the default target. If you want Firefox, Safari, or another
-browser, say so explicitly in your request to the agent.
+Firefox is the default target. If you want Chrome, Safari, or another browser,
+say so explicitly in your request to the agent.
 
 Useful official guides:
 
-- [Chrome Extensions: Get started](https://developer.chrome.com/docs/extensions/get-started)
-- [Hello World and Load unpacked](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world)
+- [MDN: Your first extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension)
+- [Extension Workshop: Temporary installation in Firefox](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/)
+- [MDN: Anatomy of an extension](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)

@@ -2,5 +2,10 @@
   "manifest_version": 3,
   "name": "My Vibe-Coded Extension",
   "version": "0.0.1",
-  "description": "A minimal starting point for a personal browser extension."
+  "description": "A minimal starting point for a personal browser extension.",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "vibe-extension-starter@example.org"
+    }
+  }
 }
